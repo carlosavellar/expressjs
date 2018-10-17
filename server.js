@@ -7,12 +7,15 @@ hbs.registerPartials(__dirname + '/views/partials');
 hbs.registerHelper('currentYear', ()=>{
     return new Date().getFullYear();
 });
+hbs.registerHelper('screamIt', (text)=>{
+    return text.toUpperCase();
+});
 app.use(express.static(__dirname + '/public'));
 
 
 app.get('/about', (req, res)=>{
     res.render('about.hbs',{
-        pageTitle: 'A-bout page',
+        pageTitle: 'About page',
         homeText: 'About everything you want.',
     });
 });
