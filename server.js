@@ -33,8 +33,6 @@ app.get('/', (req, res)=>{
       });
 });
 
-
-
 app.listen(port = 3000, (e) => {
     console.log(`Server started on port ${port}`);
 });
